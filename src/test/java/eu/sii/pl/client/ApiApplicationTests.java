@@ -1,4 +1,4 @@
-package eu.sii.pl.api;
+package eu.sii.pl.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

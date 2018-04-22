@@ -1,4 +1,4 @@
-package eu.sii.pl.api.model;
+package eu.sii.pl.client.model;
 
 import java.util.List;
 

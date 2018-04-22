@@ -1,15 +1,12 @@
-package eu.sii.pl.api;
+package eu.sii.pl.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.annotation.PostConstruct;
-import javax.validation.constraints.Positive;
-
 @SpringBootApplication
-public class ApiApplication {
+public class ClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiApplication.class, args);
+        SpringApplication.run(ClientApplication.class, args);
     }
 }

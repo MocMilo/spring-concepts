@@ -1,9 +1,9 @@
-package eu.sii.pl.api;
+package eu.sii.pl.client;
 
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ApiController {
+public class ClientController {
 
 
 
