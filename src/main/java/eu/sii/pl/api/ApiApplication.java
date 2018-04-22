@@ -1,12 +1,12 @@
-package eu.sii.pl.alivio;
+package eu.sii.pl.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AlivioApplication {
+public class ApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlivioApplication.class, args);
+        SpringApplication.run(ApiApplication.class, args);
     }
 }
