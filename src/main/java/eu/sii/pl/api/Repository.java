@@ -13,4 +13,8 @@ public class Repository {
     public List<Debtor> getDebtors() {
         return debtors;
     }
+
+    public void setDebtors(List<Debtor> debtors) {
+        this.debtors = debtors;
+    }
 }

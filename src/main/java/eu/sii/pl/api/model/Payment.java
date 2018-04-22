@@ -8,6 +8,18 @@ public class Payment {
     private BigDecimal value;
     private CreditCard creditCard;
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
+
     public Payment(LocalDate date, BigDecimal value, CreditCard creditCard) {
         this.date = date;
         this.value = value;

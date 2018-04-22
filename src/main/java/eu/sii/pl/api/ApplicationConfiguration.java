@@ -12,6 +12,7 @@ import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 @ComponentScan("eu.sii.pl.api")
@@ -21,25 +22,25 @@ public class ApplicationConfiguration {
     Repository repository;
 
     @PostConstruct
-    void init() {
+    public void init() {
 
 
-        Debtor debtor1 = new Debtor("John", "Smith", "342342342", Arrays.asList(
+        Debtor debtor1 = new Debtor("John", "Smith", "078-05-1120", Arrays.asList(
                 new Debt(new BigDecimal("100"),
                         LocalDate.of(2018, 2, 10),
                         Arrays.asList())));
 
-        Debtor debtor2 = new Debtor("Joe", "Doe", "555553435", Arrays.asList(
-                new Debt(new BigDecimal("100"),
+        Debtor debtor2 = new Debtor("Joe", "Doe", "088-04-2750", Arrays.asList(
+                new Debt(new BigDecimal("150"),
                         LocalDate.of(2017, 11, 13),
                         Arrays.asList(
                                 new Payment(LocalDate.of(2018, 03, 15),
                                         new BigDecimal("60"),
 
-                                        new CreditCard("2142342", "3234",
+                                        new CreditCard("4539128673131380", "3234",
                                                 LocalDate.of(2020, 10, 31)))
                         ))));
-       repository.getDebtors().add(debtor1);
-       repository.getDebtors().add(debtor2);
+       List<Debtor> debtors = Arrays.asList(debtor1, debtor2);
+       repository.setDebtors(debtors);
     }
 }

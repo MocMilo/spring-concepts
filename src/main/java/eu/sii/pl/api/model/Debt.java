@@ -9,6 +9,24 @@ public class Debt {
     private LocalDate repaymentDate;
     private List<Payment> payments;
 
+    public BigDecimal getDebtValue() {
+        return debtValue;
+    }
+
+    public LocalDate getRepaymentDate() {
+        return repaymentDate;
+    }
+
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    // may be updated
+    public void setPayments(List<Payment> payments) {
+        this.payments = payments;
+    }
+
+
     public Debt(BigDecimal debtValue, LocalDate repaymentDate, List<Payment> payments) {
         this.debtValue = debtValue;
         this.repaymentDate = repaymentDate;
