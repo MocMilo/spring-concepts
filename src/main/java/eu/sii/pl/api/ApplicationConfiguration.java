@@ -37,7 +37,7 @@ public class ApplicationConfiguration {
                                 new Payment(LocalDate.of(2018, 03, 15),
                                         new BigDecimal("60"),
 
-                                        new CreditCard("4539128673131380", "3234",
+                                        new CreditCard("4539128673131380", "3234","Visa",
                                                 LocalDate.of(2020, 10, 31)))
                         ))));
        List<Debtor> debtors = Arrays.asList(debtor1, debtor2);
