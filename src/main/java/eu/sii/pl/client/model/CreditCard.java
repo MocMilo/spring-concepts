@@ -24,6 +24,9 @@ public class CreditCard {
         return IssuingNetwork;
     }
 
+    public CreditCard() {
+    }
+
     public CreditCard(String cardId, String cvv, LocalDate expDate, String issuingNetwork) {
         CardId = cardId;
         this.cvv = cvv;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debtor</title>
+</head>
+<body>
+<p>Debtor</p>
+<div>
+    <p th:text="${debtor.getName()}">
+    <p th:text="${debtor.getSurname()}"/>
+    <p th:text="${debtor.getSsn()}"/>
+    <table border="1">
+        <tr>
+            <th>Debt value</th>
+            <th>Debt repayment date</th>
+            <th>Debt payments</th>
+        </tr>
+        <tr th:each="debt: ${debtor.getDebts()}">
+            <td th:utext="${debt.getDebtValue()}">...</td>
+            <td th:utext="${debt.getRepaymentDate()}">...</td>
+            <td th:utext="${debt.getPayments()}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
