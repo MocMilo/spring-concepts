@@ -25,19 +25,19 @@ public class ApplicationConfiguration {
     public void init() {
 
 
-        Debtor debtor1 = new Debtor("John", "Smith", "078-05-1120", Arrays.asList(
-                new Debt(new BigDecimal("100"),
+        Debtor debtor1 = new Debtor(new Long("1"),"John", "Smith", "078-05-1120", Arrays.asList(
+                new Debt(new Long("1"), new BigDecimal("100"),
                         LocalDate.of(2018, 2, 10),
                         Arrays.asList())));
 
-        Debtor debtor2 = new Debtor("Joe", "Doe", "088-04-2750", Arrays.asList(
-                new Debt(new BigDecimal("150"),
+        Debtor debtor2 = new Debtor(new Long("1"),"Joe", "Doe", "088-04-2750", Arrays.asList(
+                new Debt(new Long("1"), new BigDecimal("150"),
                         LocalDate.of(2017, 11, 13),
                         Arrays.asList(
-                                new Payment(LocalDate.of(2018, 03, 15),
+                                new Payment(new Long("1"), LocalDate.of(2018, 03, 15),
                                         new BigDecimal("60"),
 
-                                        new CreditCard("4539128673131380", "3234","Visa",
+                                        new CreditCard(new Long("1"),"4539128673131380", "3234","Visa", "Joe","Doe",
                                                 LocalDate.of(2020, 10, 31)))
                         ))));
        List<Debtor> debtors = Arrays.asList(debtor1, debtor2);

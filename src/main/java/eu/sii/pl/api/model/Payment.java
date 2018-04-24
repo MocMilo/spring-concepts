@@ -4,25 +4,48 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Payment {
-    private LocalDate date;
-    private BigDecimal value;
+
+    private Long id;
+    private LocalDate paymentDate;
+    private BigDecimal paymentAmount;
     private CreditCard creditCard;
 
-    public LocalDate getDate() {
-        return date;
+    public Long getId() {
+        return id;
     }
 
-    public BigDecimal getValue() {
-        return value;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public LocalDate getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(LocalDate paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
+    public BigDecimal getPaymentAmount() {
+        return paymentAmount;
+    }
+
+    public void setPaymentAmount(BigDecimal paymentAmount) {
+        this.paymentAmount = paymentAmount;
     }
 
     public CreditCard getCreditCard() {
         return creditCard;
     }
 
-    public Payment(LocalDate date, BigDecimal value, CreditCard creditCard) {
-        this.date = date;
-        this.value = value;
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public Payment(Long id, LocalDate paymentDate, BigDecimal paymentAmount, CreditCard creditCard) {
+        this.id = id;
+        this.paymentDate = paymentDate;
+        this.paymentAmount = paymentAmount;
         this.creditCard = creditCard;
     }
 }

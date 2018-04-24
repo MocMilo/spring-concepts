@@ -11,13 +11,13 @@ import java.util.NoSuchElementException;
 
 
 @RestController
-@RequestMapping("/balances")
+@RequestMapping("/")
 public class ApiController {
 
     @Autowired
     private Repository repository;
 
-    @GetMapping("/debtor/{ssn}")
+    @GetMapping("/balance/{ssn}")
     public Debtor getBalance(@PathVariable(name = "ssn") String ssn) {
         return repository.getDebtors().stream()
                 .filter(x -> x.getSsn().equals(ssn))

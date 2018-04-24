@@ -5,32 +5,48 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Debt {
-    private BigDecimal debtValue;
+    private Long id;
+    private BigDecimal debtAmount;
     private LocalDate repaymentDate;
-    private List<Payment> payments;
+    private List<Payment> listOfPayments;
 
-    public BigDecimal getDebtValue() {
-        return debtValue;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public BigDecimal getDebtAmount() {
+        return debtAmount;
+    }
+
+    public void setDebtAmount(BigDecimal debtAmount) {
+        this.debtAmount = debtAmount;
     }
 
     public LocalDate getRepaymentDate() {
         return repaymentDate;
     }
 
-    public List<Payment> getPayments() {
-        return payments;
-    }
-
-    // may be updated
-    public void setPayments(List<Payment> payments) {
-        this.payments = payments;
-    }
-
-
-    public Debt(BigDecimal debtValue, LocalDate repaymentDate, List<Payment> payments) {
-        this.debtValue = debtValue;
+    public void setRepaymentDate(LocalDate repaymentDate) {
         this.repaymentDate = repaymentDate;
-        this.payments = payments;
     }
 
+    public List<Payment> getListOfPayments() {
+        return listOfPayments;
+    }
+
+    public void setListOfPayments(List<Payment> listOfPayments) {
+        this.listOfPayments = listOfPayments;
+    }
+
+    public Debt(Long id, BigDecimal debtAmount, LocalDate repaymentDate, List<Payment> listOfPayments) {
+        this.id = id;
+        this.debtAmount = debtAmount;
+        this.repaymentDate = repaymentDate;
+        this.listOfPayments = listOfPayments;
+    }
 }
