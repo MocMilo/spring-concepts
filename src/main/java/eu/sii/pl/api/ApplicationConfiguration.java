@@ -80,7 +80,7 @@ public class ApplicationConfiguration {
 
         Debtor debtor3 = new Debtor(1L,
                 "John",
-                "Rambo",
+                "Rambo - updated3",
                 "9999-999-999",
                 Arrays.asList(debt, debt2, debt3));
 

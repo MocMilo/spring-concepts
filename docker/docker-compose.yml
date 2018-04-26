@@ -1,0 +1,11 @@
+version: '2'
+services:
+  jenkins-deployment:
+    container_name: "jenkins-deployment"
+    build: ./jenkins-deploy
+    ports:
+      - 7000:8070
+    volumes:
+#      - ../var/jenkins_deploy:/
+      - ../target:/apidep
+
